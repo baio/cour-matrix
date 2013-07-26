@@ -91,3 +91,13 @@ class Vec:
     def copy(self):
         "Don't make a new copy of the domain D"
         return Vec(self.D, self.f.copy())
+
+    def toTuple(self):
+        return tuple([self[x] for x in self.D])
+
+def getLinearCombinations(D, span, iter):
+    for i in iter:
+        yield i * Vec(D, span)
+
+#a = list(getLinearCombinations({"x", "y"}, {"x" : 1, "y" : 3}, [x / 100 for x in range(0, 100)]))
+#plot([x.toTuple() for x in a])

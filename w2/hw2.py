@@ -87,80 +87,26 @@ def GF2_span(D, L):
             vec = vec + linear_coeffs[i] * L[i]
         res.append(vec)
 
-    print(res)
-
     return res
-
-
-    """
-    veclist = list()
-    ix = 0
-    for d in D:
-        v = [one] * len(D)
-        veclist.append(v)
-        for i in range(ix):
-            v[i] = 0
-        ix += 1
-    print(veclist)
-
-    res = []
-    for p in product([0,1], repeat=len(D)):
-        vec = Vec(D, {})
-        #print("======")
-        for i in range(len(veclist)):
-            f = dict(zip(D, veclist[i] * p[i]))
-            #print(f)
-            vec = vec + Vec(D, f)
-            #print(vec)
-        res.append(vec)
-
-    print(res)
-
-    return vec
-    """
-
-    """
-    a = [one, one, one]
-    b = [0,   one, one]
-    c = [0,     0, one]
-
-    D = {'a', 'b', 'c'}
-    """
-
-    """
-    for i in [0, 1]:
-        for j in [0, 1]:
-            for k in [0, 1]:
-                a_i = veclist[0] * i
-                b_j = veclist[1] * j
-                c_k = veclist[2] * k
-                v_a = Vec(D, {'a' : a_i[0], 'b' : a_i[1], 'c' : a_i[2]}) if len(a_i) > 0 else Vec(D, {})
-                v_b = Vec(D, {'a' : b_j[0], 'b' : b_j[1], 'c' : b_j[2]}) if len(b_j) > 0 else Vec(D, {})
-                v_c = Vec(D, {'a' : c_k[0], 'b' : c_k[1], 'c' : c_k[2]}) if len(c_k) > 0 else Vec(D, {})
-                v = v_a + v_b + v_c
-                print(v)
-    """
-
-D = {'a', 'b', 'c'}
-L = [Vec(D, {'a': one, 'c': one}), Vec(D, {'b': one})]
-GF2_span(D, L)
-
 
 
 ## Problem 4
 # Answer with a boolean, please.
+#https://d396qusza40orc.cloudfront.net/matrix/slides%2FThe_Vector_Space_03_Geometry_sets_of_vectors.pdf
+#https://class.coursera.org/matrix-001/forum/thread?thread_id=1879
+#http://www.math.niu.edu/~beachy/courses/240/vectorspace.html
 
-is_it_a_vector_space_1 = ...
-is_it_a_vector_space_2 = ...
+is_it_a_vector_space_1 = True
+is_it_a_vector_space_2 = False
 
 
 
 ## Problem 5
-is_it_a_vector_space_3 = ...
-is_it_a_vector_space_4 = ...
+is_it_a_vector_space_3 = True
+is_it_a_vector_space_4 = False
 
 
 ## Problem 6
 
-is_it_a_vector_space_5 = ...
-is_it_a_vector_space_6 = ...
+is_it_a_vector_space_5 = True
+is_it_a_vector_space_6 = False
